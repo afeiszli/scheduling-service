@@ -1,0 +1,9 @@
+mongodb/service/SwaggerConfig.class
+mongodb/service/MessageRepo.class
+mongodb/service/RunApp.class
+mongodb/service/MongoTimer$QueryMongo.class
+mongodb/service/MessageProducer.class
+mongodb/service/MongoTimer.class
+mongodb/service/MessageController.class
+mongodb/service/ScheduledMessage.class
+mongodb/service/TimePeriod.class

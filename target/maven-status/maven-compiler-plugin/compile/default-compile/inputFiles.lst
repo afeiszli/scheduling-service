@@ -1,0 +1,8 @@
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/MessageProducer.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/MongoTimer.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/TimePeriod.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/RunApp.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/ScheduledMessage.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/MessageRepo.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/MessageController.java
+/home/afeiszli/microservices/mongodb.service/src/main/java/mongodb/service/SwaggerConfig.java
