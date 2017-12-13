@@ -2,6 +2,7 @@ package mongodb.service;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
+import java.util.Arrays;
 
 import javax.servlet.ServletException;
 
@@ -16,6 +17,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.MongoClientURI;
+import com.mongodb.MongoCredential;
+import com.mongodb.ServerAddress;
 
 
 @RestController
@@ -29,6 +34,7 @@ public class MessageController {
 		return "Hello World";
 	}
 	
+	@SuppressWarnings("deprecation")
 	@RequestMapping(value = "/sendMessage/", method = RequestMethod.POST)
     public String returnMessage(@RequestBody ScheduledMessage message) throws JsonProcessingException {
       
@@ -60,7 +66,18 @@ public class MessageController {
     		
     		MongoClient mc = null;
 			try {
-				mc = new MongoClient("localhost", 27017);
+				
+
+				 MongoCredential credential = MongoCredential.createMongoCRCredential("admin", "test", "password".toCharArray() );
+
+				 MongoClientOptions options = MongoClientOptions.builder().build();
+
+				 mc = new MongoClient(new ServerAddress("localhost", 27017),
+				                                           Arrays.asList(credential),
+				                                           options);
+			
+//				mc = new MongoClient("localhost", 27017);
+//				mc = new MongoClient(new MongoClientURI( "mongodb://admin:password@localhost/data" ));
 			} catch (UnknownHostException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
