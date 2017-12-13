@@ -28,11 +28,6 @@ public class MessageController {
     public String returnHelloWorld() {
 		return "Hello World";
 	}
-   
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-    public String returnHello() {
-		return "Hello World";
-	}
 	
 	@RequestMapping(value = "/sendMessage/", method = RequestMethod.POST)
     public String returnMessage(@RequestBody ScheduledMessage message) throws JsonProcessingException {
